@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>Color Trainer</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        p {
+            margin: 15px;
+            font-size: 20px;
+        }
+        #refleft {
+            width: 10%;
+            height: 100vh;
+            float: left;
+        }
+        #color {
+            width: 80%;
+            height: 100vh;
+            float: left;
+            background-color: white;
+        }
+        #refright {
+            width: 10%;
+            height: 100vh;
+            float: left;
+        }
+        .ref {
+            height: 50vh;
+            width: 100%;
+        }
+        #ref0 {
+            background-color: black;
+        }
+        #ref1 {
+            background-color: white;
+        }
+        #ref2 {
+            background-color: white;
+        }
+        #ref3 {
+            background-color: black;
+        }
+        #guess {
+            background-color: rgba(0,0,0,0);
+            border-style: solid;
+            font-size: 20px;
+            height: 30px;
+            width: 80px;
+        }
+        #guessedcolor {
+            margin-left: 60px;
+            height: 60px;
+            width: 60px;
+        }
+        input[type='button'] {                  
+            background-color: rgba(0,0,0,0);
+            border-style: solid;  
+            font-size: 15px;       
+            height: 40px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="refleft">
+        <div id="ref0" class="ref"></div>
+        <div id="ref1" class="ref"></div>
+    </div>
+    <div id="color">
+        <p>Score: <span id="score">0</span> out of <span id="n">0</span> guesses</p>
+        <p>Guess: <input type="text" id="guess"> <input type="button" value="Ok" id="submit"></p>
+        <p>Your Guess:      
+            <div id="guessedcolor"></div>
+        </p>
+        <p>Accuracy: <span id="accuracy"></span></p>
+        <p><input type="button" value="Reset" id="reset"> <input type="button" value="Next" id="next"></p>
+    </div>
+
+    <div id="refright">
+        <div id="ref2" class="ref"></div>
+        <div id="ref3" class="ref"></div>
+    </div>
+    <script src="../lib/jquery-3.1.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
